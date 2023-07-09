@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
       include: 
       [
         {model: Category}, 
-        {model: Tag, through: ProductTag, as: 'product_tag'}
+        {model: Tag, through: ProductTag, as: 'product_tags'}
       ]
     });
     res.status(200).json(productData);
@@ -30,7 +30,7 @@ router.get('/:id', async (req, res) => {
       include: 
       [
         {model: Category}, 
-        {model: Tag, through: ProductTag, as: 'product_tag'}
+        {model: Tag, through: ProductTag, as: 'product_tags'}
       ]
     });
 
